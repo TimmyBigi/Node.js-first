@@ -65,7 +65,7 @@ exports.update = async (req, res) => {
 
 exports.GetAll = async (req,res) =>{
   try{
-    const IDmeApplication = await IDme.find()
+    const IDmeApplication = await idMeModel .find()
     return res
     .status(200).json({data: IDmeApplication, length: IDmeApplication.length});
   }  catch (error) {
