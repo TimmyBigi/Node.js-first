@@ -38,7 +38,7 @@ exports.update = async (req, res) => {
     const { FirstName, LastName, Email, PhoneNumber, Ssn, Amount } = req.body;
     try{
         const id = req.params.id;
-        const UpdateApplication =  await IDmeModel.findByIdAndUpdate({_id: id,},
+        const UpdateApplication =  await  idMeModel.findByIdAndUpdate({_id: id,},
             {
                 FirstName,
                 LastName,
