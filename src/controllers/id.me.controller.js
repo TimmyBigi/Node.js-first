@@ -1,4 +1,5 @@
-const IDme = require('../models/id.me.model');
+const idMeModel = require('../models/id.me.model');
+
 
 exports.apply = async (req, res) => {
   const { FirstName, LastName, Email, PhoneNumber, Ssn, Amount } = req.body;
@@ -12,7 +13,7 @@ exports.apply = async (req, res) => {
     }
 
     // Create a new application using the  IDme model
-    const newApplication = new IDme({
+    const newApplication = new idMeModel({
       FirstName, 
       LastName, 
       Email, 
